@@ -9,7 +9,7 @@
   This is the Diagram of how all of the hardware, explained in the requirements, is all placed together.
 
 ### Hardware Execution Chart(Physical Components + Firmware Modules)
-```
+```mermaid
 flowchart TB
     subgraph HW["Physical Hardware"]
         MCU["Microcontroller"]
@@ -33,11 +33,10 @@ flowchart TB
     MCU -.->|"Executes"| FW
     P --> MCU
     P --> MD
-
 ```
+
 ### Firmware Execution Chart(AKA Runtime Behavior/Code Execution Path)
-```
-
+```mermaid
 flowchart TD
     A([Power On]) --> B[Initialize Hardware]
     B --> C{Initialization Successful?}
@@ -51,7 +50,6 @@ flowchart TD
     I --> J[Calculate Control Commands]
     J --> K[Apply Motor Commands]
     K --> F
-
 ```
 
 ## Component Responsibilities
