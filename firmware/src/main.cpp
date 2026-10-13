@@ -15,7 +15,11 @@ int main() {
 
     // 2. Initialize Subsystems
     MotorController motors(pi);
-    SensorReader sensors(pi);
+
+    // Setup distance sensor on Pi Pins GPIO 23 (Trigger) and GPIO 24 (Echo)
+    Sensor proximitySensor(23, 24);
+    proximitySensor.initialize();
+    
     
     // 3. Initialize AI Brain
     RobotAI brain;
@@ -26,8 +30,14 @@ int main() {
 
     std::cout << "All systems green. AI autonomy loop active.\n";
 
+
     // 4. Main Control Loop (Running at ~20Hz)
     while (true) {
+        
+        if (proximitySensor.isEmergencyClose(15.0f)) {
+            std::cout << "EMERGENCY BRAKE:Overriding AI.\n";
+            motors.executeCommand(RobotAction::STOP);
+
         switch (choice) {
             case RobotAction::MOVE_FORWARD:
                 motors.moveForward(75); // Cruise at 75% speed
