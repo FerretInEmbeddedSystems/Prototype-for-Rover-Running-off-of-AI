@@ -3,17 +3,17 @@
 #include <thread>
 #include <iostream>
 
-DistanceSensor::DistanceSensor(int triggerPin, int echoPin) 
+Sensor::Sensor(int triggerPin, int echoPin) 
     : trigger(triggerPin), echo(echoPin), isReady(false) {}
 
-DistanceSensor::~DistanceSensor() {
+Sensor::~Sensor() {
     if (isReady) {
         triggerLine.release();
         echoLine.release();
     }
 }
 
-bool DistanceSensor::initialize() {
+bool Sensor::initialize() {
     try {
         // Open the default GPIO chip on the Pi
         gpioChip = gpiod::chip("0"); 
@@ -34,7 +34,7 @@ bool DistanceSensor::initialize() {
     }
 }
 
-float DistanceSensor::getDistanceCM() {
+float Sensor::getDistanceCM() {
     if (!isReady) return -1.0f;
 
     // 1. Ensure trigger is low before pulse
@@ -74,7 +74,7 @@ float DistanceSensor::getDistanceCM() {
     return distance;
 }
 
-bool DistanceSensor::isEmergencyClose(float thresholdCM) {
+bool Sensor::isEmergencyClose(float thresholdCM) {
     float currentDistance = getDistanceCM();
     
     // Ignore error readings (-1), but trigger brake if below threshold
