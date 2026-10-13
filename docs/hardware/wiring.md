@@ -5,7 +5,7 @@
 
 This document defines the physical electrical connections between the rover's hardware components. It specifies pin assignments, power distribution, grounding, and electrical constraints required for hardware assembly.
 
-Serial communication configuration and message protocols are documented separately in `serial-io.md`.
+Serial communication configuration and message protocols will be documented separately in `serial-io.md`.
 
 ## 2. Hardware Inventory
 
