@@ -1,18 +1,31 @@
 #ifndef SENSOR_H
 #define SENSOR_H
 
-#include <Arduino.h>
+#include <gpiod.hpp>
+#include <string>
 
 class Sensor {
-  private:
-    uint8_t _trigPin; // Output pin on uno
-    uint8_t _echoPin; // input pin on uno
+public:
+    Sensor(int triggerPin, int echoPin);
+    ~Sensor();
 
-  public:
-    DistanceSensor(uint8_t trigPin, uint8_t echoPin);
+    bool initialize();
     
-    void begin();
-    float getDistance();
+    // Returns distance in centimeters
+    float getDistanceCM();
+    
+    // Quick check to see if an object is dangerously close
+    bool isEmergencyClose(float thresholdCM);
+
+private:
+    int trigger;
+    int echo;
+    
+    gpiod::chip gpioChip;
+    gpiod::line triggerLine;
+    gpiod::line echoLine;
+    bool isReady;
 };
 
-#endif
+#endif // SENSOR_H
+
