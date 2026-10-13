@@ -14,28 +14,28 @@ const int MOVE_SPEED = 180;
 
 // MOVEMENT CONTROLLER FUNCTIONS
 
-void Stop() {
+void stop() {
     leftMotor.brake(); // Uses your TB6612 short brake configuration
     rightMotor.brake();
 }
 
-void Forward() {
+void moveForward() {
     leftMotor.drive(MOVE_SPEED, true);  // Left forward
     rightMotor.drive(MOVE_SPEED, true); // Right forward
 }
 
-void Backward() {
+void moveBackward() {
     // BACKUP OPTION: Pass 'false' to flip the TB6612 truth tables to reverse
     leftMotor.drive(MOVE_SPEED, false);  // Left reverse
     rightMotor.drive(MOVE_SPEED, false); // Right reverse
 }
 
-void Left() {
+void turnLeft() {
     leftMotor.drive(MOVE_SPEED, false); // Pivot left: left wheel backwards
     rightMotor.drive(MOVE_SPEED, true);  // right wheel forwards
 }
 
-void Right() {
+void turnRight() {
     leftMotor.drive(MOVE_SPEED, true);  // Pivot right: left wheel forwards
     rightMotor.drive(MOVE_SPEED, false); // right wheel backwards
 }
