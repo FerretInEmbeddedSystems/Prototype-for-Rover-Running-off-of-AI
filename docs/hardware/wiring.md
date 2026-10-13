@@ -11,13 +11,13 @@ Serial communication configuration and message protocols are documented separate
 
 | ID | Component | Model | Reference |
 |---|---|---|---|
-| HW-01 | Microcontroller | Arduino Uno 4 | (Datasheet)[https://docs.arduino.cc/resources/datasheets/ABX00087-datasheet.pdf] |
-| HW-02 | Companion Computer | Raspberry Pi 5 | (Datasheet)[https://www.richardelectronics.com/blog/projects/raspberry%20pi/raspberry-pi-5-pinout-specs-datasheet-projects] |
-| HW-03 | Distance Sensor | HC-SR04 | (Datasheet)[https://cdn-learn.adafruit.com/downloads/pdf/ultrasonic-sonar-distance-sensors.pdf] |
+| HW-01 | Microcontroller | Arduino Uno 4 | [Datasheet](https://docs.arduino.cc/resources/datasheets/ABX00087-datasheet.pdf) |
+| HW-02 | Companion Computer | Raspberry Pi 5 | [Datasheet](https://www.richardelectronics.com/blog/projects/raspberry%20pi/raspberry-pi-5-pinout-specs-datasheet-projects) |
+| HW-03 | Distance Sensor | HC-SR04 | [Datasheet](https://cdn-learn.adafruit.com/downloads/pdf/ultrasonic-sonar-distance-sensors.pdf) |
 | HW-04 | Camera for Companion Computer | Raspberry Pi Camera Module 3 | [Datasheet](https://www.farnell.com/datasheets/4562668.pdf) |
-| HW-05 | Motor Driver | TB6612FNG | (Datasheet)[https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/925/TB6612FNG_Hookup_Guide_Web.pdf] |
-| HW-06 | Motor Assembly | TBD | Datasheet |
-| HW-06 | Battery / Power System | TBD | Datasheet |
+| HW-05 | Motor Driver | TB6612FNG | [Datasheet](https://learn.sparkfun.com/tutorials/tb6612fng-hookup-guide/all) |
+| HW-06 | Motor Assembly | G12-N20 Geared Mini DC Motor | [Datasheet](https://www.handsontec.com/dataspecs/motor_fan/GA12-N20.pdf) |
+| HW-06 | Battery / Power System | Battery Holder, AAx8 | [Datasheet](https://www.farnell.com/datasheets/2629293.pdf) |
 
 ## 3. Wiring Diagram
 
