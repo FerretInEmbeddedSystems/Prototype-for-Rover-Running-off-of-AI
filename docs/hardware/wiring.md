@@ -93,8 +93,9 @@ When done, we'll know whether to source power from the battery or from the ardui
 | Component | Supply Voltage | Current Requirement | Power Source |
 |---|---|---|---|
 | Microcontroller | TBD | TBD | TBD |
-| Sensor 1 | TBD | TBD | TBD |
-| Sensor 2 | TBD | TBD | TBD |
+| Companion Computer | TBD | TBD | TBD |
+| Camera for Computer | TBD | TBD | TBD |
+| Distance Sensor | TBD | TBD | TBD |
 | Motor Driver | TBD | TBD | TBD |
 | Motor Assembly | TBD | TBD | TBD |
 
