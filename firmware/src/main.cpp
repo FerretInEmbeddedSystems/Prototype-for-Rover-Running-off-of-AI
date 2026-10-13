@@ -28,22 +28,13 @@ int main() {
 
     // 4. Main Control Loop (Running at ~20Hz)
     while (true) {
-        // --- SENSE ---
-        float distance = sensors.getUltrasonicDistance();
-        std::vector<float> telemetry = sensors.getGyroscopeData(); // e.g., [X, Y, Z]
-
-        // --- THINK ---
-        // Feed the real-world sensor numbers into your AI model
-        RobotAction choice = brain.decideNextAction(distance, telemetry);
-
-        // --- ACT ---
-        // Execute the AI's structural choice using your hardware wrapper
         switch (choice) {
             case RobotAction::MOVE_FORWARD:
                 motors.moveForward(75); // Cruise at 75% speed
                 break;
           case RobotAction::MOVE_BACKWARD:
-                motors.moveBackward(50); // 50% as reverse speed
+                motors.moveBackward(-50); // 50% as reverse speed
+                break
             case RobotAction::TURN_RIGHT:
                 motors.turnRight(50);
                 break;
