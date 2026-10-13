@@ -20,9 +20,8 @@ int main() {
     Sensor proximitySensor(23, 24);
     proximitySensor.initialize();
     
-    
     // 3. Initialize AI Brain
-    RobotAI brain;
+    AI brain;
     if (!brain.loadModel("models/navigation_model.tflite")) {
         std::cerr << "Failed to load AI model!\n";
         return 1;
@@ -36,22 +35,22 @@ int main() {
         
         if (proximitySensor.isEmergencyClose(15.0f)) {
             std::cout << "EMERGENCY BRAKE:Overriding AI.\n";
-            motors.executeCommand(RobotAction::STOP);
+            motors.executeCommand(Action::STOP);
 
         switch (choice) {
-            case RobotAction::MOVE_FORWARD:
+            case Action::MOVE_FORWARD:
                 motors.moveForward(75); // Cruise at 75% speed
                 break;
-          case RobotAction::MOVE_BACKWARD:
+          case Action::MOVE_BACKWARD:
                 motors.moveBackward(-50); // 50% as reverse speed
                 break
-            case RobotAction::TURN_RIGHT:
+            case Action::TURN_RIGHT:
                 motors.turnRight(50);
                 break;
-            case RobotAction::TURN_LEFT:
+            case Action::TURN_LEFT:
                 motors.turnLeft(50);
                 break;
-            case RobotAction::STOP:
+            case Action::STOP:
             default:
                 motors.stop();
                 break;
