@@ -41,7 +41,7 @@ int main() {
             case Action::MOVE_FORWARD:
                 motors.moveForward(75); // Cruise at 75% speed
                 break;
-          case Action::MOVE_BACKWARD:
+            case Action::MOVE_BACKWARD:
                 motors.moveBackward(-50); // 50% as reverse speed
                 break
             case Action::TURN_RIGHT:
