@@ -5,26 +5,34 @@ I'd test it but I'm kind of saving up for another thing right now.
 ## Project Structure Tree
 ```
 RoverOnAI/
+├── docs/
+│ ├── hardware/
+| |  ├── architecture.md
+| |  ├── wiring.md
+| |  └── serial-protocol.md
+│ └── requirements.md
 ├── firmware/
+│ ├── platformio.ini
+│ ├── include/
+| |  ├── motors.h
+| |  ├── sensors.h
+| |  └── communication.h
 │ ├── src/
 | |  ├── main.cpp
 | |  ├── motors.cpp
-| |  ├── motors.h
 | |  ├── sensors.cpp
-| |  ├── sensors.h
-| |  ├── communication.cpp
-| |  └── communication.h
-│ └── platformio.ini
+| |  └── communication.cpp
+│ └── tests/
+│   ├── test_protocol.py
+│   └── test_navigation.py
 ├── ai/
-│ ├── camera.py
+│ ├── main.py
 │ ├── model.py
+│ ├── camera.py
 │ ├── navigation.py
-│ └── main.py
+│ └── requirements.txt
 ├── protocol/
 │ └── commands.md
-├── tests/
-├── docs/
 ├── README.md
-├── LICENSE
-└── requirements.txt
+└── LICENSE
 ```
