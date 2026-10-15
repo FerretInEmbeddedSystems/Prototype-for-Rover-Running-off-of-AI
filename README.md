@@ -79,4 +79,4 @@ To assist with development, initial drafts of specific files were generated via 
 AI tools were used strictly as a starting point for boilerplate code and debugging concepts, while all final implementation details remain the work of the human author.
 
 ## License
-This project is licensed under the **Apache License 2.0**. It offers open permissions for commercial, private, and academic utility while extending mutual patent and trademark protections to all contributors. See the [LICENSE](./LICENSE.txt) file for the full legal text.
+This project is licensed under the **Apache License 2.0**. It offers open permissions for commercial, private, and academic utility while extending mutual patent and trademark protections to all contributors. See the [LICENSE](./LICENSE) file for the full legal text.
