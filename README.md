@@ -74,9 +74,9 @@ RoverOnAI/
   ### AI Disclosure & Code Authorship
     The entire structure and codebase of this repository were manually managed and controlled exclusively by the author. No automated AI extensions or repository integrations were used during development.
 
-    To assist with development, initial drafts of specific files were generated via **OpenAI ChatGPT** and **Google Gemini** chat interfaces. These files were then manually reviewed, copy-pasted, and extensively corrected, refactored, and verified by hand within this repository to ensure accuracy, security, and architectural fit. 
+    To assist with development, initial drafts of specific files were generated via ChatGPT and Google Gemini chat interfaces. These files were then manually reviewed, copy-pasted, and corrected, refactored, and verified by hand within this repository to ensure accuracy, security, and architectural fit. 
 
   AI tools were used strictly as a starting point for boilerplate code and debugging concepts, while all final implementation details remain the work of the human author.
 
-## Licensing
-  This is going to be a standard CopyLeft Project to contribute to the open source community to continue the development of mechatronic systems.
+## License
+This project is licensed under the **Apache License 2.0**. It offers open permissions for commercial, private, and academic utility while extending mutual patent and trademark protections to all contributors. See the [LICENSE](./LICENSE) file for the full legal text.
