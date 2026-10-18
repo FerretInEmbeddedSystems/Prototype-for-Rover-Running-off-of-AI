@@ -58,11 +58,14 @@ RoverOnAI/
 │   ├── test_protocol.py
 │   └── test_navigation.py
 ├── ai/
-│ ├── main.py
-│ ├── model.py
-│ ├── camera.py
-│ ├── navigation.py
-│ └── requirements.txt
+│   ├── main.py
+│   ├── camera.py
+│   ├── perception.py
+│   ├── decision.py
+│   ├── communication.py
+│   ├── models/
+│   │   └── rover_model.tflite
+│   └── requirements.txt
 ├── protocol/
 │ └── commands.md
 ├── README.md
