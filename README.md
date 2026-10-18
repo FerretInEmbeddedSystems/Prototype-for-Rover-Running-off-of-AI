@@ -56,6 +56,7 @@ RoverOnAI/
 | |  └── communication.cpp
 │ └── tests/
 │   ├── test_protocol.py
+│   ├── test_cam.py
 │   └── test_navigation.py
 ├── ai/
 │   ├── main.py
