@@ -47,6 +47,8 @@ The diagram below will represent the physical electrical connections between com
 
 ### Passive wiring map of ribbon connection between camera and pi(you will link one ribbon to get the system working
 
+```
+
 [ CAMERA MODULE 3 ]                                        [ RASPBERRY PI 5 ]
  15-Pin Connector                                           22-Pin Mini Port
 ┌────────────────┐                                         ┌────────────────┐
@@ -74,6 +76,9 @@ The diagram below will represent the physical electrical connections between com
                                                            │ (21) NC (GND)  │
                                                            │ (22) NC (GND)  │
                                                            └────────────────┘
+
+
+```
 
 
 ## 5. Power Distribution
